@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch: # Позволяет запускать тесты вручную кнопкой
+  schedule:
+    - cron: '25 14 * * *'
 
 jobs:
   run-postman-tests:
